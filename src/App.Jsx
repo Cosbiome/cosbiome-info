@@ -1,4 +1,4 @@
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,14 +7,14 @@ import FormRegisto from "./pages/FormRegisto";
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <Switch>
         <Layoud>
           <Route exact path="/" component={Home} />
           <Route exact path="/registro/:inte" component={FormRegisto} />
         </Layoud>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 };
 
